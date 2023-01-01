@@ -1,15 +1,40 @@
-import { Box } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from "@mui/material";
+import React, { useState } from "react";
+import { ListDetails } from "./ListDetails";
 
 const LeftSideBar = () => {
+  const [mode, setMode] = useState("light");
   return (
-    <Box
-      flex={1}
-      p={2}
-      bgcolor={"lightgreen"}
-      sx={{ display: { xs: "none", sm: "block" } }}
-    >
-      LeftSideBar
+    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+      <List>
+        {ListDetails.map((item, index) => {
+          const { hrefTag, icon, text } = item;
+          return (
+            <ListItem key={index} disablePadding>
+              <ListItemButton component="a" href={hrefTag}>
+                <ListItemIcon>{icon}</ListItemIcon>
+                {text !== "mode" ? (
+                  <ListItemText primary={text} />
+                ) : (
+                  <Switch
+                    onChange={(e) =>
+                      setMode(mode === "light" ? "dark" : "light")
+                    }
+                  />
+                )}
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
     </Box>
   );
 };
