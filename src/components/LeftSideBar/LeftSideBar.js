@@ -14,6 +14,7 @@ const LeftSideBar = () => {
   const [mode, setMode] = useState("light");
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box position="fixed">
       <List>
         {ListDetails.map((item, index) => {
           const { hrefTag, icon, text } = item;
@@ -35,6 +36,7 @@ const LeftSideBar = () => {
           );
         })}
       </List>
+      </Box>
     </Box>
   );
 };
