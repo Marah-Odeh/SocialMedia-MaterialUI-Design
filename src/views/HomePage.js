@@ -4,6 +4,7 @@ import LeftSideBar from "../components/LeftSideBar/LeftSideBar";
 import Navbar from "../components/Navbar/Navbar";
 import RightSideBar from "../components/RightSideBar/RightSideBar";
 import { Box, Stack } from "@mui/material";
+import AddPost from "../components/AddPost/AddPost";
 const HomePage = () => {
   return (
     <Box>
@@ -13,6 +14,7 @@ const HomePage = () => {
         <Feed />
         <RightSideBar />
       </Stack>
+      <AddPost/>
     </Box>
   );
 };
