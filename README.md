@@ -27,4 +27,5 @@ React.js and Material UI.
 <img src="https://user-images.githubusercontent.com/81569702/215873396-2cfbb19f-2dc1-4ed9-aae6-2eb7bbe1d521.PNG"   />
 <img src="https://user-images.githubusercontent.com/81569702/215873389-ad510489-8f41-401f-b6f8-c794aa2b4a52.PNG" />
 </div>
+
 ### Other features will be added to the page in the near future, Inshallah :)
